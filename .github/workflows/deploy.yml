@@ -13,6 +13,8 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --file=package.json
 
   deploy-heroku:
     name: Deploy Heroku
